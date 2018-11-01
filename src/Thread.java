@@ -18,18 +18,15 @@ public class Thread extends DataSender {
     @Override
     public void send() {
         if (toSend > 0 && receiver != null) {
-            receiver.update();
-            receiver.receive();
-            toSend--;
+            receiver.update(); // Update a receiver
+            receiver.receive(); // Then send a message
+            toSend--; // After sending a message decrease a number of message to be sent
         }
     }
 
     @Override
     public void receive() {
+        color = Color.RED;
         toSend++;
-    }
-
-    public void log() {
-        System.out.println("toSend: " + toSend);
     }
 }
