@@ -11,8 +11,8 @@ public class Thread extends DataSender {
 
     @Override
     public void update() {
-        color = Color.GREEN;
         send();
+        color = Color.GREEN;
     }
 
     @Override

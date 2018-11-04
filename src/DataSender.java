@@ -40,9 +40,7 @@ public abstract class DataSender {
 
     public abstract void send(); // Send a message to a receiver
 
-    public void receive() {
-
-    } // Receive a message
+    public abstract void receive(); // Receive a message
 
     public void draw(Graphics g) {
         g.setColor(color);
